@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		{% block load_files_top %}
+		
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css">
+
+		 {% endblock %}
+
+		<title>{% block title %} Bit Bits {% endblock %}</title>
+	</head>
+
+	<body>
+		<header>
+			<span>Bit Bits</span>
+			<span>Random things valued in BTC</span>
+		</header>
+
+		{% block content %} {% endblock %}
+		
+
+		<footer>
+			<span><a href="https://www.linkedin.com/in/arjunsarode">Arjun Sarode</a> / <a href="https://twitter.com/rjun07a">@rjun07a</a> / <a href="github.com/asarode">github.com/asarode</a></span>
+		</footer>
+
+		{% block load_files_bottom %}
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/angular.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+		{% endblock %}
+
+		
+	</body>
+</html>

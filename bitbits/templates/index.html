@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="text-center">
+		<h1><span class="item-name">{{ item.name }}</span><span id="loader">Loading...</span></h1>
+		<hr/>
+		{% load widget_tweaks %}
+		<h2><span class="item-BTC">{{ price.BTC }}</span> BTC</h2>
+		<img class="item-img" src="{{ STATIC_URL }}img/{{ item.imgfile }}">
+		<h4><span class="item-USD">{{ item.price }}</span> USD</h4>
+		<h4><span class="item-mBTC">{{ price.mBTC }}</span> mBTC</h4>
+		<p>More BTC values <a id="stumble" class="btn btn-default">See another!</a></p> 
+	</div>
+</div>
+	
+{% endblock %}
